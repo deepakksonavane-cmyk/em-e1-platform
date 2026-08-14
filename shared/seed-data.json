@@ -1,0 +1,1826 @@
+{
+  "program": {
+    "programName": "Event Management & Team Leadership E1",
+    "programCode": "E1",
+    "durationWeeks": 24,
+    "durationMonths": 6,
+    "totalHours": 420,
+    "totalSessions": 74,
+    "totalSubjects": 6,
+    "totalLecturers": 6,
+    "mode": "Blended Learning (Online + In-Person + Practical)",
+    "level": "Diploma / Professional Certificate",
+    "attendancePolicy": "Minimum 80% attendance required for online and in-person sessions",
+    "gradingScale": [
+      {
+        "grade": "A",
+        "range": "90-100%"
+      },
+      {
+        "grade": "B",
+        "range": "80-89%"
+      },
+      {
+        "grade": "C",
+        "range": "70-79%"
+      },
+      {
+        "grade": "D",
+        "range": "60-69%"
+      },
+      {
+        "grade": "F",
+        "range": "<60%"
+      }
+    ],
+    "keyDates": [
+      {
+        "event": "Course Start - Weekend 1 (In-Person)",
+        "week": 1
+      },
+      {
+        "event": "Online Sessions Begin",
+        "week": 2
+      },
+      {
+        "event": "Mid-Term Weekend 2 (In-Person)",
+        "week": 12
+      },
+      {
+        "event": "All Online Sessions Complete",
+        "week": 20
+      },
+      {
+        "event": "Internship Period",
+        "week": "21-23"
+      },
+      {
+        "event": "Final Weekend 3 (In-Person - Graduation)",
+        "week": 24
+      }
+    ]
+  },
+  "subjects": [
+    {
+      "code": "E1-S1",
+      "name": "Foundations of Event Management & Leadership",
+      "lecturer": "Lecturer 1",
+      "sessions": 8,
+      "hours": 16,
+      "weeks": "2-3"
+    },
+    {
+      "code": "E1-S2",
+      "name": "Event Planning & Budgeting",
+      "lecturer": "Lecturer 2",
+      "sessions": 6,
+      "hours": 12,
+      "weeks": "3-4"
+    },
+    {
+      "code": "E1-S3",
+      "name": "Marketing & Branding for Events",
+      "lecturer": "Lecturer 3",
+      "sessions": 6,
+      "hours": 12,
+      "weeks": "5-6"
+    },
+    {
+      "code": "E1-S4",
+      "name": "Event Production, Operations & Logistics",
+      "lecturer": "Lecturer 4",
+      "sessions": 14,
+      "hours": 28,
+      "weeks": "6-9"
+    },
+    {
+      "code": "E1-S5",
+      "name": "Team Leadership & Digital Events",
+      "lecturer": "Lecturer 5",
+      "sessions": 16,
+      "hours": 32,
+      "weeks": "10-11,13-14"
+    },
+    {
+      "code": "E1-S6",
+      "name": "Business, Entrepreneurship & Career Development",
+      "lecturer": "Lecturer 6",
+      "sessions": 24,
+      "hours": 48,
+      "weeks": "15-20"
+    }
+  ],
+  "sessions": [
+    {
+      "sessionNumber": 1,
+      "code": "S01",
+      "week": 2,
+      "day": "Tuesday",
+      "module": "Module 1",
+      "moduleName": "Foundations of Event Management & Leadership",
+      "subjectCode": "E1-S1",
+      "topic": "Introduction to Event Management & Industry Overview",
+      "hours": 2,
+      "keyTopics": [
+        "Event Industry Overview",
+        "Career Paths",
+        "Industry Trends",
+        "Key Players"
+      ],
+      "teachingMethod": "Lecture + Discussion",
+      "assessment": "Q&A Participation",
+      "resources": "Industry Reports, PPT"
+    },
+    {
+      "sessionNumber": 2,
+      "code": "S02",
+      "week": 2,
+      "day": "Wednesday",
+      "module": "Module 1",
+      "moduleName": "Foundations of Event Management & Leadership",
+      "subjectCode": "E1-S1",
+      "topic": "Types of Events: Corporate, Wedding, MICE, Social, Sports",
+      "hours": 2,
+      "keyTopics": [
+        "Event Categories",
+        "MICE",
+        "Weddings",
+        "Social Events",
+        "Sports Events",
+        "Characteristics of Each"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Case Study Analysis",
+      "resources": "Case Study Handouts"
+    },
+    {
+      "sessionNumber": 3,
+      "code": "S03",
+      "week": 2,
+      "day": "Thursday",
+      "module": "Module 1",
+      "moduleName": "Foundations of Event Management & Leadership",
+      "subjectCode": "E1-S1",
+      "topic": "Event Lifecycle: From Concept to Execution",
+      "hours": 2,
+      "keyTopics": [
+        "Idea Generation",
+        "Feasibility Study",
+        "Planning Phase",
+        "Execution Phase",
+        "Post-Event Phase"
+      ],
+      "teachingMethod": "Lecture + Group Activity",
+      "assessment": "Group Presentation",
+      "resources": "Event Lifecycle Diagram"
+    },
+    {
+      "sessionNumber": 4,
+      "code": "S04",
+      "week": 2,
+      "day": "Friday",
+      "module": "Module 1",
+      "moduleName": "Foundations of Event Management & Leadership",
+      "subjectCode": "E1-S1",
+      "topic": "Leadership Theories & Styles in Event Management",
+      "hours": 2,
+      "keyTopics": [
+        "Trait Theory",
+        "Behavioral Theory",
+        "Situational Leadership",
+        "Transformational vs Transactional",
+        "Servant Leadership"
+      ],
+      "teachingMethod": "Lecture + Role Play",
+      "assessment": "Role Play Assessment",
+      "resources": "Leadership Assessment Tools"
+    },
+    {
+      "sessionNumber": 5,
+      "code": "S05",
+      "week": 3,
+      "day": "Monday",
+      "module": "Module 1",
+      "moduleName": "Foundations of Event Management & Leadership",
+      "subjectCode": "E1-S1",
+      "topic": "Building High-Performance Event Teams",
+      "hours": 2,
+      "keyTopics": [
+        "Team Formation",
+        "Roles & Responsibilities",
+        "Team Dynamics",
+        "Trust Building",
+        "Collaboration Techniques"
+      ],
+      "teachingMethod": "Lecture + Workshop",
+      "assessment": "Team Building Exercise",
+      "resources": "Team Building Activity Cards"
+    },
+    {
+      "sessionNumber": 6,
+      "code": "S06",
+      "week": 3,
+      "day": "Tuesday",
+      "module": "Module 1",
+      "moduleName": "Foundations of Event Management & Leadership",
+      "subjectCode": "E1-S1",
+      "topic": "Communication Strategies for Event Leaders",
+      "hours": 2,
+      "keyTopics": [
+        "Verbal & Non-Verbal Communication",
+        "Active Listening",
+        "Feedback Techniques",
+        "Stakeholder Communication"
+      ],
+      "teachingMethod": "Lecture + Role Play",
+      "assessment": "Communication Skills Assessment",
+      "resources": "Communication Matrix Template"
+    },
+    {
+      "sessionNumber": 7,
+      "code": "S07",
+      "week": 3,
+      "day": "Wednesday",
+      "module": "Module 1",
+      "moduleName": "Foundations of Event Management & Leadership",
+      "subjectCode": "E1-S1",
+      "topic": "Emotional Intelligence & Conflict Resolution",
+      "hours": 2,
+      "keyTopics": [
+        "Self-Awareness",
+        "Self-Regulation",
+        "Empathy",
+        "Social Skills",
+        "Conflict Resolution Models",
+        "Mediation"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Conflict Resolution Exercise",
+      "resources": "EQ Assessment Tool"
+    },
+    {
+      "sessionNumber": 8,
+      "code": "S08",
+      "week": 3,
+      "day": "Thursday",
+      "module": "Module 1",
+      "moduleName": "Foundations of Event Management & Leadership",
+      "subjectCode": "E1-S1",
+      "topic": "Decision-Making & Problem-Solving in Events",
+      "hours": 2,
+      "keyTopics": [
+        "Decision-Making Models",
+        "Critical Thinking",
+        "Problem-Solving Techniques",
+        "Risk Assessment",
+        "SWOT Analysis"
+      ],
+      "teachingMethod": "Lecture + Group Activity",
+      "assessment": "Decision-Making Simulation",
+      "resources": "SWOT Template"
+    },
+    {
+      "sessionNumber": 9,
+      "code": "S09",
+      "week": 3,
+      "day": "Friday",
+      "module": "Module 2",
+      "moduleName": "Event Planning & Budgeting",
+      "subjectCode": "E1-S2",
+      "topic": "Budgeting Basics & Cost Sheets",
+      "hours": 2,
+      "keyTopics": [
+        "Cost Estimation",
+        "Line Items",
+        "Fixed vs Variable Costs",
+        "Profit Margins",
+        "Break-Even Analysis"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "Practical Budget Creation",
+      "resources": "Budget Template"
+    },
+    {
+      "sessionNumber": 10,
+      "code": "S10",
+      "week": 4,
+      "day": "Monday",
+      "module": "Module 2",
+      "moduleName": "Event Planning & Budgeting",
+      "subjectCode": "E1-S2",
+      "topic": "Venue Sourcing & Contract Negotiation",
+      "hours": 2,
+      "keyTopics": [
+        "Venue Selection Criteria",
+        "Site Inspection",
+        "Negotiation Strategies",
+        "Contract Terms",
+        "Legal Considerations"
+      ],
+      "teachingMethod": "Lecture + Role Play",
+      "assessment": "Negotiation Role Play",
+      "resources": "Venue Contract Template"
+    },
+    {
+      "sessionNumber": 11,
+      "code": "S11",
+      "week": 4,
+      "day": "Tuesday",
+      "module": "Module 2",
+      "moduleName": "Event Planning & Budgeting",
+      "subjectCode": "E1-S2",
+      "topic": "Vendor Management: Catering, AV, Decor",
+      "hours": 2,
+      "keyTopics": [
+        "Vendor Selection",
+        "RFQ/RFP Process",
+        "Vendor Contracts",
+        "Relationship Management",
+        "Performance Evaluation"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Vendor Evaluation Exercise",
+      "resources": "Vendor Scorecard"
+    },
+    {
+      "sessionNumber": 12,
+      "code": "S12",
+      "week": 4,
+      "day": "Wednesday",
+      "module": "Module 2",
+      "moduleName": "Event Planning & Budgeting",
+      "subjectCode": "E1-S2",
+      "topic": "Risk Management & Legal Permissions",
+      "hours": 2,
+      "keyTopics": [
+        "Risk Identification",
+        "Risk Assessment Matrix",
+        "Mitigation Strategies",
+        "Licenses",
+        "Permits",
+        "Insurance"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "Risk Assessment Exercise",
+      "resources": "Risk Assessment Template"
+    },
+    {
+      "sessionNumber": 13,
+      "code": "S13",
+      "week": 4,
+      "day": "Thursday",
+      "module": "Module 2",
+      "moduleName": "Event Planning & Budgeting",
+      "subjectCode": "E1-S2",
+      "topic": "Sponsorship Acquisition & Management",
+      "hours": 2,
+      "keyTopics": [
+        "Sponsor Types",
+        "Sponsorship Packages",
+        "ROI for Sponsors",
+        "Pitch Decks",
+        "Sponsorship Agreements"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "Sponsorship Proposal Creation",
+      "resources": "Sponsorship Template"
+    },
+    {
+      "sessionNumber": 14,
+      "code": "S14",
+      "week": 4,
+      "day": "Friday",
+      "module": "Module 2",
+      "moduleName": "Event Planning & Budgeting",
+      "subjectCode": "E1-S2",
+      "topic": "Financial Management & ROI for Events",
+      "hours": 2,
+      "keyTopics": [
+        "Income Statements",
+        "P&L",
+        "ROI Calculation",
+        "Cost Control",
+        "Cash Flow Management"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "ROI Calculation Exercise",
+      "resources": "Financial Template"
+    },
+    {
+      "sessionNumber": 15,
+      "code": "S15",
+      "week": 5,
+      "day": "Monday",
+      "module": "Module 3",
+      "moduleName": "Marketing & Branding for Events",
+      "subjectCode": "E1-S3",
+      "topic": "Pre-Event Marketing & Ticketing Strategies",
+      "hours": 2,
+      "keyTopics": [
+        "Marketing Funnel",
+        "Audience Segmentation",
+        "Marketing Channels",
+        "Early Bird Pricing",
+        "Last-Minute Sales"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "Ticketing Strategy Exercise",
+      "resources": "Marketing Plan Template"
+    },
+    {
+      "sessionNumber": 16,
+      "code": "S16",
+      "week": 5,
+      "day": "Tuesday",
+      "module": "Module 3",
+      "moduleName": "Marketing & Branding for Events",
+      "subjectCode": "E1-S3",
+      "topic": "Public Relations & Media Coverage",
+      "hours": 2,
+      "keyTopics": [
+        "Press Releases",
+        "Media Kits",
+        "Media Lists",
+        "Media Relations",
+        "Press Conferences",
+        "PR Strategies"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Press Release Writing",
+      "resources": "PR Toolkit"
+    },
+    {
+      "sessionNumber": 17,
+      "code": "S17",
+      "week": 5,
+      "day": "Wednesday",
+      "module": "Module 3",
+      "moduleName": "Marketing & Branding for Events",
+      "subjectCode": "E1-S3",
+      "topic": "Event Branding: Signages, Backdrops, Screens",
+      "hours": 2,
+      "keyTopics": [
+        "Visual Identity",
+        "Brand Guidelines",
+        "Wayfinding",
+        "Signage Types",
+        "Backdrop Design",
+        "Digital Screens"
+      ],
+      "teachingMethod": "Lecture + Workshop",
+      "assessment": "Signage Design Exercise",
+      "resources": "Design Templates"
+    },
+    {
+      "sessionNumber": 18,
+      "code": "S18",
+      "week": 5,
+      "day": "Thursday",
+      "module": "Module 3",
+      "moduleName": "Marketing & Branding for Events",
+      "subjectCode": "E1-S3",
+      "topic": "Social Media Marketing for Events (Organic)",
+      "hours": 2,
+      "keyTopics": [
+        "Social Media Strategy",
+        "Content Calendar",
+        "Engagement",
+        "Hashtags",
+        "Social Listening",
+        "User-Generated Content"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "Content Calendar Creation",
+      "resources": "Social Media Calendar"
+    },
+    {
+      "sessionNumber": 19,
+      "code": "S19",
+      "week": 6,
+      "day": "Monday",
+      "module": "Module 3",
+      "moduleName": "Marketing & Branding for Events",
+      "subjectCode": "E1-S3",
+      "topic": "Paid Ads (Meta/Google) for Event Ticketing",
+      "hours": 2,
+      "keyTopics": [
+        "Facebook/Instagram Ads",
+        "Google Ads",
+        "Retargeting",
+        "Ad Copy",
+        "Budget Allocation",
+        "Performance Metrics"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "Ad Campaign Creation",
+      "resources": "Ads Platform Access"
+    },
+    {
+      "sessionNumber": 20,
+      "code": "S20",
+      "week": 6,
+      "day": "Tuesday",
+      "module": "Module 3",
+      "moduleName": "Marketing & Branding for Events",
+      "subjectCode": "E1-S3",
+      "topic": "Influencer Marketing & Media Partnerships",
+      "hours": 2,
+      "keyTopics": [
+        "Influencer Identification",
+        "Outreach",
+        "Agreements",
+        "Content Creation",
+        "Media Partnerships",
+        "Coverage Measurement"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Influencer Outreach Exercise",
+      "resources": "Influencer List"
+    },
+    {
+      "sessionNumber": 21,
+      "code": "S21",
+      "week": 6,
+      "day": "Wednesday",
+      "module": "Module 4",
+      "moduleName": "Event Production & Design",
+      "subjectCode": "E1-S4",
+      "topic": "Stage Design Principles & Floor Plans",
+      "hours": 2,
+      "keyTopics": [
+        "Stage Layout",
+        "Audience Sightlines",
+        "Stage Access",
+        "Riser Design",
+        "Floor Plan Software",
+        "Safety Considerations"
+      ],
+      "teachingMethod": "Lecture + Workshop",
+      "assessment": "Floor Plan Creation",
+      "resources": "Floor Plan Software"
+    },
+    {
+      "sessionNumber": 22,
+      "code": "S22",
+      "week": 6,
+      "day": "Thursday",
+      "module": "Module 4",
+      "moduleName": "Event Production & Design",
+      "subjectCode": "E1-S4",
+      "topic": "AV Technology: Lighting, Sound Basics",
+      "hours": 2,
+      "keyTopics": [
+        "Lighting Techniques",
+        "Sound Systems",
+        "Microphones",
+        "AV Equipment",
+        "Setup & Testing",
+        "Troubleshooting"
+      ],
+      "teachingMethod": "Lecture + Demo",
+      "assessment": "AV Checklist Exercise",
+      "resources": "AV Equipment List"
+    },
+    {
+      "sessionNumber": 23,
+      "code": "S23",
+      "week": 7,
+      "day": "Monday",
+      "module": "Module 4",
+      "moduleName": "Event Production & Design",
+      "subjectCode": "E1-S4",
+      "topic": "Entertainment Booking: Artists, Anchors, Performers",
+      "hours": 2,
+      "keyTopics": [
+        "Entertainment Types",
+        "Booking Process",
+        "Contracts",
+        "Rider Requirements",
+        "Artist Management",
+        "Rehearsals"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Booking Case Study",
+      "resources": "Entertainment Contract Template"
+    },
+    {
+      "sessionNumber": 24,
+      "code": "S24",
+      "week": 7,
+      "day": "Tuesday",
+      "module": "Module 4",
+      "moduleName": "Event Production & Design",
+      "subjectCode": "E1-S4",
+      "topic": "Catering Management: Plated vs Buffet vs Food Stations",
+      "hours": 2,
+      "keyTopics": [
+        "Menu Planning",
+        "Dietary Restrictions",
+        "Plated Service",
+        "Buffet Setup",
+        "Food Stations",
+        "Cost Management"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "Menu Creation Exercise",
+      "resources": "Menu Planning Template"
+    },
+    {
+      "sessionNumber": 25,
+      "code": "S25",
+      "week": 7,
+      "day": "Wednesday",
+      "module": "Module 4",
+      "moduleName": "Event Production & Design",
+      "subjectCode": "E1-S4",
+      "topic": "Event Styling & D\u00e9cor Trends",
+      "hours": 2,
+      "keyTopics": [
+        "Design Elements",
+        "Color Theory",
+        "Lighting & D\u00e9cor",
+        "Central Pieces",
+        "Furniture",
+        "Props",
+        "Rental Sourcing"
+      ],
+      "teachingMethod": "Lecture + Workshop",
+      "assessment": "Styling Mood Board Creation",
+      "resources": "Mood Board Template"
+    },
+    {
+      "sessionNumber": 26,
+      "code": "S26",
+      "week": 7,
+      "day": "Thursday",
+      "module": "Module 4",
+      "moduleName": "Event Production & Design",
+      "subjectCode": "E1-S4",
+      "topic": "F&B Trends in Events",
+      "hours": 2,
+      "keyTopics": [
+        "Food Trends",
+        "Beverage Trends",
+        "Sustainable F&B",
+        "Interactive Food Stations",
+        "Experiential Dining"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Trend Analysis Exercise",
+      "resources": "Industry Trend Reports"
+    },
+    {
+      "sessionNumber": 27,
+      "code": "S27",
+      "week": 8,
+      "day": "Monday",
+      "module": "Module 5",
+      "moduleName": "Operations & Logistics",
+      "subjectCode": "E1-S4",
+      "topic": "Run-of-Show (ROS) Creation & Timing",
+      "hours": 2,
+      "keyTopics": [
+        "ROS Elements",
+        "Timing",
+        "Event Flow",
+        "Transitions",
+        "Buffer Time",
+        "Communication during Execution"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "ROS Creation Exercise",
+      "resources": "ROS Template"
+    },
+    {
+      "sessionNumber": 28,
+      "code": "S28",
+      "week": 8,
+      "day": "Tuesday",
+      "module": "Module 5",
+      "moduleName": "Operations & Logistics",
+      "subjectCode": "E1-S4",
+      "topic": "Staffing, Volunteers & Crew Briefing",
+      "hours": 2,
+      "keyTopics": [
+        "Staff Sizing",
+        "Job Descriptions",
+        "Recruitment",
+        "Training",
+        "Briefing",
+        "Rotation Planning",
+        "Retention"
+      ],
+      "teachingMethod": "Lecture + Workshop",
+      "assessment": "Staffing Plan Exercise",
+      "resources": "Staffing Template"
+    },
+    {
+      "sessionNumber": 29,
+      "code": "S29",
+      "week": 8,
+      "day": "Wednesday",
+      "module": "Module 5",
+      "moduleName": "Operations & Logistics",
+      "subjectCode": "E1-S4",
+      "topic": "On-ground Logistics: Load-in & Load-out",
+      "hours": 2,
+      "keyTopics": [
+        "Loading Dock",
+        "Equipment Movement",
+        "Setup Schedule",
+        "Bump-in",
+        "Bump-out",
+        "Waste Management"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Logistics Plan Exercise",
+      "resources": "Logistics Checklist"
+    },
+    {
+      "sessionNumber": 30,
+      "code": "S30",
+      "week": 8,
+      "day": "Thursday",
+      "module": "Module 5",
+      "moduleName": "Operations & Logistics",
+      "subjectCode": "E1-S4",
+      "topic": "Guest List Management & RSVP Software",
+      "hours": 2,
+      "keyTopics": [
+        "Guest List Tools",
+        "RSVP Tracking",
+        "Check-in Apps",
+        "QR Codes",
+        "Badge Printing",
+        "Hospitality Management"
+      ],
+      "teachingMethod": "Lecture + Demo",
+      "assessment": "Software Walkthrough",
+      "resources": "RSVP Software Access"
+    },
+    {
+      "sessionNumber": 31,
+      "code": "S31",
+      "week": 9,
+      "day": "Monday",
+      "module": "Module 5",
+      "moduleName": "Operations & Logistics",
+      "subjectCode": "E1-S4",
+      "topic": "Registration Software & Check-in Apps",
+      "hours": 2,
+      "keyTopics": [
+        "Registration Platforms",
+        "On-site Check-in",
+        "Offline Mode",
+        "Data Security",
+        "Attendee Tracking"
+      ],
+      "teachingMethod": "Lecture + Demo",
+      "assessment": "Software Demo Exercise",
+      "resources": "Registration Platforms"
+    },
+    {
+      "sessionNumber": 32,
+      "code": "S32",
+      "week": 9,
+      "day": "Tuesday",
+      "module": "Module 5",
+      "moduleName": "Operations & Logistics",
+      "subjectCode": "E1-S4",
+      "topic": "Emergency Response Plans (Fire, Medical, Weather)",
+      "hours": 2,
+      "keyTopics": [
+        "Risk Assessment",
+        "Evacuation Plans",
+        "Medical Response",
+        "Weather Contingency",
+        "Emergency Communication"
+      ],
+      "teachingMethod": "Lecture + Scenario",
+      "assessment": "Emergency Plan Creation",
+      "resources": "Emergency Plan Template"
+    },
+    {
+      "sessionNumber": 33,
+      "code": "S33",
+      "week": 9,
+      "day": "Wednesday",
+      "module": "Module 5",
+      "moduleName": "Operations & Logistics",
+      "subjectCode": "E1-S4",
+      "topic": "Event Security & Crowd Management",
+      "hours": 2,
+      "keyTopics": [
+        "Access Control",
+        "Perimeter Security",
+        "Crowd Flow",
+        "VIP Protection",
+        "Incident Reporting",
+        "Security Briefing"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Security Plan Exercise",
+      "resources": "Security Checklist"
+    },
+    {
+      "sessionNumber": 34,
+      "code": "S34",
+      "week": 9,
+      "day": "Thursday",
+      "module": "Module 5",
+      "moduleName": "Operations & Logistics",
+      "subjectCode": "E1-S4",
+      "topic": "Travel & Accommodation Management",
+      "hours": 2,
+      "keyTopics": [
+        "Guest Travel Arrangements",
+        "Hotel Blocks",
+        "Airport Transfers",
+        "Travel Itineraries",
+        "VIP Guest Coordination"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "Travel Plan Exercise",
+      "resources": "Travel Template"
+    },
+    {
+      "sessionNumber": 35,
+      "code": "S35",
+      "week": 10,
+      "day": "Monday",
+      "module": "Module 6",
+      "moduleName": "Team Leadership & People Management",
+      "subjectCode": "E1-S5",
+      "topic": "Recruiting & Selecting Event Team Members",
+      "hours": 2,
+      "keyTopics": [
+        "Job Descriptions",
+        "Sourcing",
+        "Interviewing",
+        "Selection Criteria",
+        "Background Checks",
+        "Onboarding"
+      ],
+      "teachingMethod": "Lecture + Role Play",
+      "assessment": "Interview Role Play",
+      "resources": "Interview Template"
+    },
+    {
+      "sessionNumber": 36,
+      "code": "S36",
+      "week": 10,
+      "day": "Tuesday",
+      "module": "Module 6",
+      "moduleName": "Team Leadership & People Management",
+      "subjectCode": "E1-S5",
+      "topic": "Delegation & Task Assignment Strategies",
+      "hours": 2,
+      "keyTopics": [
+        "Delegation Models",
+        "Skill Assessment",
+        "Task Prioritization",
+        "Authority & Accountability",
+        "Follow-up"
+      ],
+      "teachingMethod": "Lecture + Workshop",
+      "assessment": "Delegation Exercise",
+      "resources": "Delegation Matrix"
+    },
+    {
+      "sessionNumber": 37,
+      "code": "S37",
+      "week": 10,
+      "day": "Wednesday",
+      "module": "Module 6",
+      "moduleName": "Team Leadership & People Management",
+      "subjectCode": "E1-S5",
+      "topic": "Motivating & Engaging Event Teams",
+      "hours": 2,
+      "keyTopics": [
+        "Motivation Theories",
+        "Employee Engagement",
+        "Recognition Programs",
+        "Team Morale",
+        "Positive Culture"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Motivation Plan Exercise",
+      "resources": "Employee Engagement Tools"
+    },
+    {
+      "sessionNumber": 38,
+      "code": "S38",
+      "week": 10,
+      "day": "Thursday",
+      "module": "Module 6",
+      "moduleName": "Team Leadership & People Management",
+      "subjectCode": "E1-S5",
+      "topic": "Performance Management & Feedback",
+      "hours": 2,
+      "keyTopics": [
+        "Performance Reviews",
+        "Feedback Models",
+        "360-degree Feedback",
+        "Coaching",
+        "Development Plans"
+      ],
+      "teachingMethod": "Lecture + Role Play",
+      "assessment": "Feedback Role Play",
+      "resources": "Performance Review Template"
+    },
+    {
+      "sessionNumber": 39,
+      "code": "S39",
+      "week": 11,
+      "day": "Monday",
+      "module": "Module 6",
+      "moduleName": "Team Leadership & People Management",
+      "subjectCode": "E1-S5",
+      "topic": "Managing Diverse & Remote Teams",
+      "hours": 2,
+      "keyTopics": [
+        "Diversity & Inclusion",
+        "Cultural Sensitivity",
+        "Remote Team Management",
+        "Virtual Communication Tools"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Diversity & Inclusion Exercise",
+      "resources": "Remote Team Toolkit"
+    },
+    {
+      "sessionNumber": 40,
+      "code": "S40",
+      "week": 11,
+      "day": "Tuesday",
+      "module": "Module 6",
+      "moduleName": "Team Leadership & People Management",
+      "subjectCode": "E1-S5",
+      "topic": "Team Building Activities & Icebreakers",
+      "hours": 2,
+      "keyTopics": [
+        "Icebreaker Types",
+        "Team Building Exercises",
+        "Trust-Building",
+        "Problem-Solving Activities",
+        "Retreat Planning"
+      ],
+      "teachingMethod": "Workshop + Activity",
+      "assessment": "Activity Facilitation",
+      "resources": "Team Building Guide"
+    },
+    {
+      "sessionNumber": 41,
+      "code": "S41",
+      "week": 11,
+      "day": "Wednesday",
+      "module": "Module 6",
+      "moduleName": "Team Leadership & People Management",
+      "subjectCode": "E1-S5",
+      "topic": "Leadership in Crisis Situations",
+      "hours": 2,
+      "keyTopics": [
+        "Decision-Making Under Pressure",
+        "Risk Management",
+        "Team Morale",
+        "Crisis Communication",
+        "Post-Crisis Recovery"
+      ],
+      "teachingMethod": "Lecture + Scenario",
+      "assessment": "Crisis Simulation",
+      "resources": "Scenario Handouts"
+    },
+    {
+      "sessionNumber": 42,
+      "code": "S42",
+      "week": 11,
+      "day": "Thursday",
+      "module": "Module 6",
+      "moduleName": "Team Leadership & People Management",
+      "subjectCode": "E1-S5",
+      "topic": "Ethical Leadership & Professionalism",
+      "hours": 2,
+      "keyTopics": [
+        "Ethical Frameworks",
+        "Professional Ethics",
+        "Stakeholder Trust",
+        "Integrity",
+        "Professionalism Standards"
+      ],
+      "teachingMethod": "Lecture + Discussion",
+      "assessment": "Case Study Analysis",
+      "resources": "Code of Ethics Guide"
+    },
+    {
+      "sessionNumber": 43,
+      "code": "S43",
+      "week": 13,
+      "day": "Tuesday",
+      "module": "Module 7",
+      "moduleName": "Digital & Virtual Events",
+      "subjectCode": "E1-S5",
+      "topic": "Virtual Event Platforms (Zoom, Hopin, Airmeet)",
+      "hours": 2,
+      "keyTopics": [
+        "Platform Comparison",
+        "Features",
+        "Hosting Capabilities",
+        "Breakout Rooms",
+        "Recording",
+        "Webinar vs Meeting"
+      ],
+      "teachingMethod": "Lecture + Demo",
+      "assessment": "Platform Evaluation Exercise",
+      "resources": "Platform Access"
+    },
+    {
+      "sessionNumber": 44,
+      "code": "S44",
+      "week": 13,
+      "day": "Wednesday",
+      "module": "Module 7",
+      "moduleName": "Digital & Virtual Events",
+      "subjectCode": "E1-S5",
+      "topic": "Hybrid Event Production",
+      "hours": 2,
+      "keyTopics": [
+        "Hybrid Event Design",
+        "Production Elements",
+        "Remote Engagement",
+        "Speaker Management",
+        "Technology Setup"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Hybrid Plan Exercise",
+      "resources": "Hybrid Event Guide"
+    },
+    {
+      "sessionNumber": 45,
+      "code": "S45",
+      "week": 13,
+      "day": "Thursday",
+      "module": "Module 7",
+      "moduleName": "Digital & Virtual Events",
+      "subjectCode": "E1-S5",
+      "topic": "Virtual Audience Engagement Techniques",
+      "hours": 2,
+      "keyTopics": [
+        "Polls",
+        "Quizzes",
+        "Q&A",
+        "Chat Moderation",
+        "Breakout Groups",
+        "Gamification",
+        "Virtual Networking"
+      ],
+      "teachingMethod": "Lecture + Workshop",
+      "assessment": "Engagement Plan Exercise",
+      "resources": "Engagement Toolkit"
+    },
+    {
+      "sessionNumber": 46,
+      "code": "S46",
+      "week": 13,
+      "day": "Friday",
+      "module": "Module 7",
+      "moduleName": "Digital & Virtual Events",
+      "subjectCode": "E1-S5",
+      "topic": "Post-Event Survey & Feedback Loops",
+      "hours": 2,
+      "keyTopics": [
+        "Survey Design",
+        "Platforms",
+        "Closing the Loop",
+        "Feedback Action Plans",
+        "Continuous Improvement"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "Survey Design Exercise",
+      "resources": "Survey Template"
+    },
+    {
+      "sessionNumber": 47,
+      "code": "S47",
+      "week": 14,
+      "day": "Monday",
+      "module": "Module 7",
+      "moduleName": "Digital & Virtual Events",
+      "subjectCode": "E1-S5",
+      "topic": "Data Analytics & Event KPIs",
+      "hours": 2,
+      "keyTopics": [
+        "Data Collection",
+        "Analytics Tools",
+        "Key Metrics",
+        "Dashboard Creation",
+        "Reporting",
+        "Data-Driven Decision-Making"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "KPI Dashboard Creation",
+      "resources": "Analytics Tools"
+    },
+    {
+      "sessionNumber": 48,
+      "code": "S48",
+      "week": 14,
+      "day": "Tuesday",
+      "module": "Module 7",
+      "moduleName": "Digital & Virtual Events",
+      "subjectCode": "E1-S5",
+      "topic": "Content Creation: Photography & Videography Briefs",
+      "hours": 2,
+      "keyTopics": [
+        "Photography Brief",
+        "Videography Brief",
+        "Shot Lists",
+        "Running Order",
+        "Content Repurposing",
+        "Licensing"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "Brief Creation Exercise",
+      "resources": "Brief Templates"
+    },
+    {
+      "sessionNumber": 49,
+      "code": "S49",
+      "week": 14,
+      "day": "Wednesday",
+      "module": "Module 7",
+      "moduleName": "Digital & Virtual Events",
+      "subjectCode": "E1-S5",
+      "topic": "Crisis Communication & Reputation Management",
+      "hours": 2,
+      "keyTopics": [
+        "Crisis Types",
+        "Communication Plan",
+        "Response Timelines",
+        "Reputation Recovery",
+        "Press Statements"
+      ],
+      "teachingMethod": "Lecture + Scenario",
+      "assessment": "Crisis Communication Plan",
+      "resources": "Communication Templates"
+    },
+    {
+      "sessionNumber": 50,
+      "code": "S50",
+      "week": 14,
+      "day": "Thursday",
+      "module": "Module 7",
+      "moduleName": "Digital & Virtual Events",
+      "subjectCode": "E1-S5",
+      "topic": "Community Building & Fan Engagement",
+      "hours": 2,
+      "keyTopics": [
+        "Community Strategy",
+        "Membership Programs",
+        "Engagement Journey",
+        "Content Strategy",
+        "Community Metrics"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Community Plan Exercise",
+      "resources": "Community Engagement Guide"
+    },
+    {
+      "sessionNumber": 51,
+      "code": "S51",
+      "week": 15,
+      "day": "Monday",
+      "module": "Module 8",
+      "moduleName": "Business & Entrepreneurship",
+      "subjectCode": "E1-S6",
+      "topic": "Building an Event Management Portfolio",
+      "hours": 2,
+      "keyTopics": [
+        "Portfolio Elements",
+        "Showcase Reels",
+        "Testimonials",
+        "Case Studies",
+        "Photography & Video",
+        "LinkedIn"
+      ],
+      "teachingMethod": "Lecture + Workshop",
+      "assessment": "Portfolio Creation Exercise",
+      "resources": "Portfolio Template"
+    },
+    {
+      "sessionNumber": 52,
+      "code": "S52",
+      "week": 15,
+      "day": "Tuesday",
+      "module": "Module 8",
+      "moduleName": "Business & Entrepreneurship",
+      "subjectCode": "E1-S6",
+      "topic": "Pitching to Clients: Creating Proposals",
+      "hours": 2,
+      "keyTopics": [
+        "Proposal Structure",
+        "Executive Summary",
+        "Scope of Work",
+        "Pricing",
+        "Terms",
+        "Visual Design"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "Proposal Creation Exercise",
+      "resources": "Proposal Template"
+    },
+    {
+      "sessionNumber": 53,
+      "code": "S53",
+      "week": 15,
+      "day": "Wednesday",
+      "module": "Module 8",
+      "moduleName": "Business & Entrepreneurship",
+      "subjectCode": "E1-S6",
+      "topic": "Pitching to Clients: Presentation Skills",
+      "hours": 2,
+      "keyTopics": [
+        "Presentation Structure",
+        "Storytelling",
+        "Body Language",
+        "Handling Questions",
+        "Closing the Deal"
+      ],
+      "teachingMethod": "Lecture + Role Play",
+      "assessment": "Pitch Presentation Practice",
+      "resources": "Presentation Template"
+    },
+    {
+      "sessionNumber": 54,
+      "code": "S54",
+      "week": 15,
+      "day": "Thursday",
+      "module": "Module 8",
+      "moduleName": "Business & Entrepreneurship",
+      "subjectCode": "E1-S6",
+      "topic": "Negotiation Skills & Closing Deals",
+      "hours": 2,
+      "keyTopics": [
+        "Negotiation Styles",
+        "BATNA",
+        "Concessions",
+        "Overcoming Objections",
+        "Closing Techniques",
+        "Contracts"
+      ],
+      "teachingMethod": "Lecture + Role Play",
+      "assessment": "Negotiation Simulation",
+      "resources": "Negotiation Guide"
+    },
+    {
+      "sessionNumber": 55,
+      "code": "S55",
+      "week": 16,
+      "day": "Monday",
+      "module": "Module 8",
+      "moduleName": "Business & Entrepreneurship",
+      "subjectCode": "E1-S6",
+      "topic": "Legal Structures: Sole Proprietorship, LLC, Partnership",
+      "hours": 2,
+      "keyTopics": [
+        "Entity Types",
+        "Registration Process",
+        "Pros & Cons",
+        "Liability",
+        "Legal Compliance",
+        "Taxation"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Entity Selection Exercise",
+      "resources": "Legal Guide"
+    },
+    {
+      "sessionNumber": 56,
+      "code": "S56",
+      "week": 16,
+      "day": "Tuesday",
+      "module": "Module 8",
+      "moduleName": "Business & Entrepreneurship",
+      "subjectCode": "E1-S6",
+      "topic": "GST, Taxation & Financial Compliance",
+      "hours": 2,
+      "keyTopics": [
+        "GST Registration",
+        "Tax Filing",
+        "Invoicing",
+        "Business Expenses",
+        "Financial Records",
+        "Compliance"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "Taxation Exercise",
+      "resources": "GST Guide"
+    },
+    {
+      "sessionNumber": 57,
+      "code": "S57",
+      "week": 16,
+      "day": "Wednesday",
+      "module": "Module 8",
+      "moduleName": "Business & Entrepreneurship",
+      "subjectCode": "E1-S6",
+      "topic": "Contracts: Terms, Conditions & Legal Clauses",
+      "hours": 2,
+      "keyTopics": [
+        "Contract Elements",
+        "Key Clauses",
+        "Liability Clauses",
+        "Intellectual Property",
+        "Force Majeure",
+        "Termination"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Contract Review Exercise",
+      "resources": "Contract Template"
+    },
+    {
+      "sessionNumber": 58,
+      "code": "S58",
+      "week": 16,
+      "day": "Thursday",
+      "module": "Module 8",
+      "moduleName": "Business & Entrepreneurship",
+      "subjectCode": "E1-S6",
+      "topic": "Pricing Strategies for Event Services",
+      "hours": 2,
+      "keyTopics": [
+        "Value-Based Pricing",
+        "Cost-Plus Pricing",
+        "Competitive Pricing",
+        "Tiered Pricing",
+        "Retainers",
+        "Profit Margins"
+      ],
+      "teachingMethod": "Lecture + Practical",
+      "assessment": "Pricing Strategy Exercise",
+      "resources": "Pricing Calculator"
+    },
+    {
+      "sessionNumber": 59,
+      "code": "S59",
+      "week": 17,
+      "day": "Monday",
+      "module": "Module 9",
+      "moduleName": "Specialized Event Types",
+      "subjectCode": "E1-S6",
+      "topic": "Wedding Event Planning (Deep Dive)",
+      "hours": 2,
+      "keyTopics": [
+        "Wedding Timeline",
+        "Vendor Coordination",
+        "Budgeting",
+        "Guest Management",
+        "Ceremony Planning",
+        "Reception Planning"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Wedding Plan Exercise",
+      "resources": "Wedding Planning Template"
+    },
+    {
+      "sessionNumber": 60,
+      "code": "S60",
+      "week": 17,
+      "day": "Tuesday",
+      "module": "Module 9",
+      "moduleName": "Specialized Event Types",
+      "subjectCode": "E1-S6",
+      "topic": "Corporate Event Planning (Deep Dive)",
+      "hours": 2,
+      "keyTopics": [
+        "Corporate Conferences",
+        "AGMs",
+        "Product Launches",
+        "Company Retreats",
+        "Corporate Hospitality",
+        "Budgeting"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Corporate Plan Exercise",
+      "resources": "Corporate Event Template"
+    },
+    {
+      "sessionNumber": 61,
+      "code": "S61",
+      "week": 17,
+      "day": "Wednesday",
+      "module": "Module 9",
+      "moduleName": "Specialized Event Types",
+      "subjectCode": "E1-S6",
+      "topic": "Music Festival & Concert Planning",
+      "hours": 2,
+      "keyTopics": [
+        "Festival Design",
+        "Artist Booking",
+        "Stage Management",
+        "Crowd Control",
+        "Production Schedule",
+        "Security"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Festival Plan Exercise",
+      "resources": "Festival Planning Template"
+    },
+    {
+      "sessionNumber": 62,
+      "code": "S62",
+      "week": 17,
+      "day": "Thursday",
+      "module": "Module 9",
+      "moduleName": "Specialized Event Types",
+      "subjectCode": "E1-S6",
+      "topic": "MICE Events (Meetings, Incentives, Conferences, Exhibitions)",
+      "hours": 2,
+      "keyTopics": [
+        "MICE Industry",
+        "Meeting Planning",
+        "Conference Management",
+        "Exhibition Design",
+        "Incentive Travel"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "MICE Plan Exercise",
+      "resources": "MICE Template"
+    },
+    {
+      "sessionNumber": 63,
+      "code": "S63",
+      "week": 18,
+      "day": "Monday",
+      "module": "Module 9",
+      "moduleName": "Specialized Event Types",
+      "subjectCode": "E1-S6",
+      "topic": "Sports Event Management",
+      "hours": 2,
+      "keyTopics": [
+        "Sports Event Types",
+        "Venue Management",
+        "Ticketing",
+        "Athlete Management",
+        "Sponsorship",
+        "Broadcast Rights"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Sports Plan Exercise",
+      "resources": "Sports Template"
+    },
+    {
+      "sessionNumber": 64,
+      "code": "S64",
+      "week": 18,
+      "day": "Tuesday",
+      "module": "Module 9",
+      "moduleName": "Specialized Event Types",
+      "subjectCode": "E1-S6",
+      "topic": "Non-Profit & Charity Event Planning",
+      "hours": 2,
+      "keyTopics": [
+        "Fundraising Strategies",
+        "Donor Engagement",
+        "Grant Writing",
+        "Volunteer Management",
+        "Awareness Campaigns"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Charity Plan Exercise",
+      "resources": "Non-Profit Template"
+    },
+    {
+      "sessionNumber": 65,
+      "code": "S65",
+      "week": 18,
+      "day": "Wednesday",
+      "module": "Module 9",
+      "moduleName": "Specialized Event Types",
+      "subjectCode": "E1-S6",
+      "topic": "Trade Show & Exhibition Management",
+      "hours": 2,
+      "keyTopics": [
+        "Exhibitor Management",
+        "Floor Plan",
+        "Booth Design",
+        "Attendee Promotion",
+        "Logistics",
+        "Post-Show Follow-up"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Trade Show Plan Exercise",
+      "resources": "Exhibition Template"
+    },
+    {
+      "sessionNumber": 66,
+      "code": "S66",
+      "week": 18,
+      "day": "Thursday",
+      "module": "Module 9",
+      "moduleName": "Specialized Event Types",
+      "subjectCode": "E1-S6",
+      "topic": "Destination Wedding & Outstation Events",
+      "hours": 2,
+      "keyTopics": [
+        "Destination Selection",
+        "Guest Travel",
+        "Resort/Vendor Coordination",
+        "Cultural Considerations",
+        "Logistics"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "Destination Plan Exercise",
+      "resources": "Destination Wedding Template"
+    },
+    {
+      "sessionNumber": 67,
+      "code": "S67",
+      "week": 19,
+      "day": "Monday",
+      "module": "Module 10",
+      "moduleName": "Career Development & Leadership Capstone",
+      "subjectCode": "E1-S6",
+      "topic": "Career Paths in Event Management",
+      "hours": 2,
+      "keyTopics": [
+        "Career Options",
+        "Event Agencies",
+        "Corporate Events",
+        "Freelancing",
+        "Entrepreneurship",
+        "Career Progression"
+      ],
+      "teachingMethod": "Lecture + Discussion",
+      "assessment": "Career Action Plan",
+      "resources": "Career Guide"
+    },
+    {
+      "sessionNumber": 68,
+      "code": "S68",
+      "week": 19,
+      "day": "Tuesday",
+      "module": "Module 10",
+      "moduleName": "Career Development & Leadership Capstone",
+      "subjectCode": "E1-S6",
+      "topic": "Resume Building & Interview Preparation",
+      "hours": 2,
+      "keyTopics": [
+        "Resume Structure",
+        "Event-Specific Skills",
+        "Cover Letters",
+        "Portfolio",
+        "Interview Techniques",
+        "Mock Interviews"
+      ],
+      "teachingMethod": "Lecture + Workshop",
+      "assessment": "Resume Creation Exercise",
+      "resources": "Resume Template"
+    },
+    {
+      "sessionNumber": 69,
+      "code": "S69",
+      "week": 19,
+      "day": "Wednesday",
+      "module": "Module 10",
+      "moduleName": "Career Development & Leadership Capstone",
+      "subjectCode": "E1-S6",
+      "topic": "Client Relationship Management (CRM)",
+      "hours": 2,
+      "keyTopics": [
+        "CRM Systems",
+        "Client Journey",
+        "Account Management",
+        "Retention Strategies",
+        "Upselling",
+        "Client Feedback"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "CRM Plan Exercise",
+      "resources": "CRM Software Access"
+    },
+    {
+      "sessionNumber": 70,
+      "code": "S70",
+      "week": 19,
+      "day": "Thursday",
+      "module": "Module 10",
+      "moduleName": "Career Development & Leadership Capstone",
+      "subjectCode": "E1-S6",
+      "topic": "Networking & Relationship Building",
+      "hours": 2,
+      "keyTopics": [
+        "Networking Strategies",
+        "Industry Associations",
+        "LinkedIn",
+        "Social Capital",
+        "Relationship Maintenance"
+      ],
+      "teachingMethod": "Lecture + Workshop",
+      "assessment": "Networking Action Plan",
+      "resources": "Networking Guide"
+    },
+    {
+      "sessionNumber": 71,
+      "code": "S71",
+      "week": 20,
+      "day": "Monday",
+      "module": "Module 10",
+      "moduleName": "Career Development & Leadership Capstone",
+      "subjectCode": "E1-S6",
+      "topic": "Personal Branding as an Event Leader",
+      "hours": 2,
+      "keyTopics": [
+        "Personal Brand Elements",
+        "Online Presence",
+        "Thought Leadership",
+        "Content Creation",
+        "Reputation Management"
+      ],
+      "teachingMethod": "Lecture + Workshop",
+      "assessment": "Personal Brand Plan",
+      "resources": "Personal Brand Guide"
+    },
+    {
+      "sessionNumber": 72,
+      "code": "S72",
+      "week": 20,
+      "day": "Tuesday",
+      "module": "Module 10",
+      "moduleName": "Career Development & Leadership Capstone",
+      "subjectCode": "E1-S6",
+      "topic": "Measuring Event ROI & Success Metrics",
+      "hours": 2,
+      "keyTopics": [
+        "ROI Frameworks",
+        "Attendance Metrics",
+        "Engagement Metrics",
+        "Satisfaction Scores",
+        "Financial Performance"
+      ],
+      "teachingMethod": "Lecture + Case Study",
+      "assessment": "ROI Analysis Exercise",
+      "resources": "ROI Templates"
+    },
+    {
+      "sessionNumber": 73,
+      "code": "S73",
+      "week": 20,
+      "day": "Wednesday",
+      "module": "Module 10",
+      "moduleName": "Career Development & Leadership Capstone",
+      "subjectCode": "E1-S6",
+      "topic": "Future Trends in Event Management",
+      "hours": 2,
+      "keyTopics": [
+        "AI in Events",
+        "Sustainability",
+        "Personalization",
+        "Experiential Marketing",
+        "Immersive Tech",
+        "Data Privacy"
+      ],
+      "teachingMethod": "Lecture + Discussion",
+      "assessment": "Trend Analysis Exercise",
+      "resources": "Trend Reports"
+    },
+    {
+      "sessionNumber": 74,
+      "code": "S74",
+      "week": 20,
+      "day": "Thursday",
+      "module": "Module 10",
+      "moduleName": "Career Development & Leadership Capstone",
+      "subjectCode": "E1-S6",
+      "topic": "Final Q&A & Course Wrap-up",
+      "hours": 2,
+      "keyTopics": [
+        "Review of Key Learnings",
+        "Q&A",
+        "Career Guidance",
+        "Course Evaluation",
+        "Celebration"
+      ],
+      "teachingMethod": "Lecture + Discussion",
+      "assessment": "Course Evaluation",
+      "resources": "Evaluation Form"
+    }
+  ],
+  "weekends": [
+    {
+      "code": "W1",
+      "name": "Weekend 1 (Start)",
+      "week": 1,
+      "focus": "Foundations & Team Building",
+      "days": [
+        {
+          "day": "Friday",
+          "hours": 8
+        },
+        {
+          "day": "Saturday",
+          "hours": 8
+        },
+        {
+          "day": "Sunday",
+          "hours": 5
+        }
+      ],
+      "totalHours": 21,
+      "activities": [
+        "Introduction & Ice-breaking",
+        "Event Concepts & Idea Generation",
+        "Team Building Activities",
+        "Site Visit",
+        "Client Pitching Role-play",
+        "Networking Dinner"
+      ]
+    },
+    {
+      "code": "W2",
+      "name": "Weekend 2 (Mid)",
+      "week": 12,
+      "focus": "Mid-Point Review & Execution",
+      "days": [
+        {
+          "day": "Friday",
+          "hours": 8
+        },
+        {
+          "day": "Saturday",
+          "hours": 8
+        },
+        {
+          "day": "Sunday",
+          "hours": 5
+        }
+      ],
+      "totalHours": 21,
+      "activities": [
+        "Full-Scale Event Simulation",
+        "Crisis Management Drill",
+        "Live Mock Event Execution",
+        "Peer Review & Feedback",
+        "Group Discussion & Debrief"
+      ]
+    },
+    {
+      "code": "W3",
+      "name": "Weekend 3 (End)",
+      "week": 24,
+      "focus": "Graduation & Finale",
+      "days": [
+        {
+          "day": "Friday",
+          "hours": 8
+        },
+        {
+          "day": "Saturday",
+          "hours": 8
+        },
+        {
+          "day": "Sunday",
+          "hours": 5
+        }
+      ],
+      "totalHours": 21,
+      "activities": [
+        "Capstone Presentations (Panel of Experts)",
+        "Live Mini-Event Execution",
+        "Final Feedback Session",
+        "Career Guidance",
+        "Graduation Ceremony"
+      ]
+    }
+  ],
+  "assessments": {
+    "weeklyAssignments": {
+      "count": 6,
+      "hoursEach": 3,
+      "weightage": 20,
+      "description": "Practical tasks after online sessions"
+    },
+    "caseStudies": {
+      "count": 8,
+      "hoursEach": 4,
+      "weightage": 20,
+      "description": "Analysis of real-world event case studies"
+    },
+    "internshipReport": {
+      "weightage": 20,
+      "minHours": 30,
+      "description": "Real-world event experience and report"
+    },
+    "capstoneProject": {
+      "weightage": 25,
+      "description": "Full event proposal and pitch deck presentation to panel"
+    },
+    "classParticipation": {
+      "weightage": 10,
+      "description": "Active engagement in online sessions"
+    },
+    "finalEvaluation": {
+      "weightage": 5,
+      "description": "Peer review and self-assessment"
+    }
+  }
+}

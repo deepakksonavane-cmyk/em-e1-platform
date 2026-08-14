@@ -1,0 +1,398 @@
+// ============================================================================
+// EM&LP E1 Platform — Canonical Prisma Schema (PostgreSQL)
+// Shared by: Student LMS + Faculty Admin Panel
+// Both apps connect to the SAME database via DATABASE_URL.
+// ============================================================================
+
+// NOTE: `engineType = "client"` is an admin-panel-local addition (not present
+// in the shared canonical schema) required because this sandbox's network
+// policy blocks binaries.prisma.sh, so the native query-engine binary cannot
+// be downloaded. This generator mode runs entirely on the WASM query
+// compiler bundled inside @prisma/client, driven via a `pg` Pool adapter
+// (see lib/prisma.ts) — no native engine binary needed. See README.md
+// "What's stubbed" for full detail. The data model below is otherwise
+// identical to /home/claude/em_e1_platform/shared/prisma/schema.prisma.
+generator client {
+  provider   = "prisma-client-js"
+  engineType = "client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------------------------------------------------------------------------
+// ENUMS
+// ---------------------------------------------------------------------------
+
+enum Role {
+  STUDENT
+  FACULTY
+  ADMIN
+}
+
+enum StudentStatus {
+  APPLIED
+  REGISTERED
+  ACTIVE
+  ON_HOLD
+  COMPLETED
+  WITHDRAWN
+}
+
+enum AttendanceStatus {
+  PRESENT
+  ABSENT
+  LATE
+  EXCUSED
+}
+
+enum SubmissionStatus {
+  NOT_SUBMITTED
+  SUBMITTED
+  LATE
+  GRADED
+  RETURNED
+}
+
+enum AssessmentType {
+  ASSIGNMENT
+  CASE_STUDY
+  CAPSTONE
+  INTERNSHIP_REPORT
+}
+
+enum NotificationType {
+  SESSION_REMINDER
+  DEADLINE_REMINDER
+  GRADE_POSTED
+  ANNOUNCEMENT
+  ATTENDANCE
+  GENERAL
+}
+
+// ---------------------------------------------------------------------------
+// CORE PROGRAM STRUCTURE
+// ---------------------------------------------------------------------------
+
+model Subject {
+  id          String   @id @default(cuid())
+  code        String   @unique // E1-S1 ... E1-S6
+  name        String
+  lecturerId  String?
+  lecturer    Faculty? @relation(fields: [lecturerId], references: [id])
+  totalSessions Int
+  totalHours    Int
+  weeksLabel    String
+  sessions    Session[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Session {
+  id             String   @id @default(cuid())
+  sessionNumber  Int      @unique // 1..74
+  code           String   @unique // S01..S74
+  week           Int
+  day            String
+  module         String
+  moduleName     String
+  topic          String
+  hours          Int      @default(2)
+  keyTopics      String[]
+  teachingMethod String
+  assessmentNote String?
+  resources      String?
+  scheduledDate  DateTime?
+  startTime      String?  // "18:00"
+  endTime        String?  // "20:00"
+  meetingLink    String?
+  recordingUrl   String?
+  notesUrl       String?
+  slidesUrl      String?
+  status         String   @default("upcoming") // upcoming | live | completed | cancelled
+
+  subjectId String
+  subject   Subject @relation(fields: [subjectId], references: [id])
+
+  facultyId String?
+  faculty   Faculty? @relation(fields: [facultyId], references: [id])
+
+  attendance Attendance[]
+  materials  Material[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Material {
+  id        String   @id @default(cuid())
+  sessionId String
+  session   Session  @relation(fields: [sessionId], references: [id])
+  title     String
+  type      String   // notes | slides | recording | resource
+  url       String
+  uploadedById String?
+  createdAt DateTime @default(now())
+}
+
+model Weekend {
+  id         String   @id @default(cuid())
+  code       String   @unique // W1, W2, W3
+  name       String
+  week       Int
+  focus      String
+  totalHours Int
+  activities String[]
+  venueName    String?
+  venueAddress String?
+  venueMapUrl  String?
+  startDate  DateTime?
+  endDate    DateTime?
+  attendance WeekendAttendance[]
+  createdAt  DateTime @default(now())
+}
+
+// ---------------------------------------------------------------------------
+// USERS
+// ---------------------------------------------------------------------------
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  role         Role
+  name         String
+  phone        String?
+  avatarUrl    String?
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  student  Student?
+  faculty  Faculty?
+
+  notifications Notification[]
+  sentMessages     Message[] @relation("SentMessages")
+  receivedMessages Message[] @relation("ReceivedMessages")
+}
+
+model Student {
+  id          String   @id @default(cuid())
+  studentId   String   @unique // E1-001
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id])
+
+  batch       String   @default("Batch A")
+  city        String?
+  state       String?
+  registrationDate DateTime @default(now())
+  status      StudentStatus @default(ACTIVE)
+
+  emergencyContactName  String?
+  emergencyContactPhone String?
+  emergencyContactRelation String?
+
+  attendance      Attendance[]
+  weekendAttendance WeekendAttendance[]
+  submissions     Submission[]
+  grades          Grade[]
+  internship      InternshipRecord?
+  certificate     Certificate?
+  applications    Application?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Faculty {
+  id             String   @id @default(cuid())
+  facultyId      String   @unique // FAC-001
+  userId         String   @unique
+  user           User     @relation(fields: [userId], references: [id])
+  specialization String?
+  bio            String?
+  subjects       Subject[]
+  sessions       Session[]
+  gradedSubmissions Submission[] @relation("GradedBy")
+  createdAt      DateTime @default(now())
+}
+
+// ---------------------------------------------------------------------------
+// ATTENDANCE
+// ---------------------------------------------------------------------------
+
+model Attendance {
+  id        String   @id @default(cuid())
+  studentId String
+  student   Student  @relation(fields: [studentId], references: [id])
+  sessionId String
+  session   Session  @relation(fields: [sessionId], references: [id])
+  status    AttendanceStatus @default(PRESENT)
+  markedAt  DateTime @default(now())
+  markedById String?
+  notes     String?
+
+  @@unique([studentId, sessionId])
+}
+
+model WeekendAttendance {
+  id        String  @id @default(cuid())
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id])
+  weekendId String
+  weekend   Weekend @relation(fields: [weekendId], references: [id])
+  fridayPresent   Boolean @default(false)
+  saturdayPresent Boolean @default(false)
+  sundayPresent   Boolean @default(false)
+  notes     String?
+
+  @@unique([studentId, weekendId])
+}
+
+// ---------------------------------------------------------------------------
+// ASSESSMENTS
+// ---------------------------------------------------------------------------
+
+model AssessmentDefinition {
+  id          String   @id @default(cuid())
+  type        AssessmentType
+  title       String
+  description String
+  guidelines  String?
+  subjectCode String?
+  maxScore    Int      @default(100)
+  weightagePercent Float
+  dueOffsetWeek Int?
+  rubric      Json?
+  submissions Submission[]
+  createdAt   DateTime @default(now())
+}
+
+model Submission {
+  id           String   @id @default(cuid())
+  studentId    String
+  student      Student  @relation(fields: [studentId], references: [id])
+  assessmentId String
+  assessment   AssessmentDefinition @relation(fields: [assessmentId], references: [id])
+  fileUrl      String?
+  textContent  String?
+  status       SubmissionStatus @default(NOT_SUBMITTED)
+  submittedAt  DateTime?
+  score        Float?
+  feedback     String?
+  gradedById   String?
+  gradedByFaculty Faculty? @relation("GradedBy", fields: [gradedById], references: [id])
+  gradedAt     DateTime?
+  grade        Grade?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([studentId, assessmentId])
+}
+
+model Grade {
+  id           String   @id @default(cuid())
+  studentId    String
+  student      Student  @relation(fields: [studentId], references: [id])
+  submissionId String?  @unique
+  submission   Submission? @relation(fields: [submissionId], references: [id])
+  category     String   // "Weekly Assignments" | "Case Studies" | "Internship" | "Capstone" | "Participation" | "Final"
+  score        Float
+  maxScore     Float    @default(100)
+  letterGrade  String?
+  comments     String?
+  createdAt    DateTime @default(now())
+}
+
+// ---------------------------------------------------------------------------
+// INTERNSHIP
+// ---------------------------------------------------------------------------
+
+model InternshipRecord {
+  id            String   @id @default(cuid())
+  studentId     String   @unique
+  student       Student  @relation(fields: [studentId], references: [id])
+  organization  String?
+  supervisorName String?
+  supervisorEmail String?
+  supervisorPhone String?
+  startDate     DateTime?
+  endDate       DateTime?
+  requiredHours Int      @default(30)
+  loggedHours   Float    @default(0)
+  status        String   @default("not_started") // not_started | in_progress | submitted | evaluated
+  reportUrl     String?
+  supervisorEvaluationUrl String?
+  logs          InternshipLog[]
+  createdAt     DateTime @default(now())
+}
+
+model InternshipLog {
+  id           String   @id @default(cuid())
+  internshipId String
+  internship   InternshipRecord @relation(fields: [internshipId], references: [id])
+  date         DateTime
+  hoursLogged  Float
+  activityDescription String
+  createdAt    DateTime @default(now())
+}
+
+// ---------------------------------------------------------------------------
+// CERTIFICATE / COMMS / APPLICATIONS
+// ---------------------------------------------------------------------------
+
+model Certificate {
+  id           String   @id @default(cuid())
+  studentId    String   @unique
+  student      Student  @relation(fields: [studentId], references: [id])
+  issued       Boolean  @default(false)
+  issueDate    DateTime?
+  certificateNo String? @unique
+  fileUrl      String?
+}
+
+model Message {
+  id           String   @id @default(cuid())
+  senderId     String
+  sender       User     @relation("SentMessages", fields: [senderId], references: [id])
+  recipientId  String
+  recipient    User     @relation("ReceivedMessages", fields: [recipientId], references: [id])
+  subject      String?
+  body         String
+  isRead       Boolean  @default(false)
+  createdAt    DateTime @default(now())
+}
+
+model Notification {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  type      NotificationType
+  title     String
+  body      String
+  isRead    Boolean  @default(false)
+  link      String?
+  createdAt DateTime @default(now())
+}
+
+model Application {
+  id        String   @id @default(cuid())
+  studentId String?  @unique
+  student   Student? @relation(fields: [studentId], references: [id])
+  fullName  String
+  email     String
+  phone     String
+  dob       DateTime?
+  gender    String?
+  city      String?
+  state     String?
+  pinCode   String?
+  highestQualification String?
+  workExperience String?
+  motivationStatement String?
+  status    String   @default("pending") // pending | reviewed | accepted | rejected
+  createdAt DateTime @default(now())
+}
