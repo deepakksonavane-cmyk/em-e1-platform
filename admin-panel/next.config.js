@@ -6,6 +6,11 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
+  experimental: {
+    outputFileTracingIncludes: {
+      "/**/*": ["./node_modules/.prisma/client/*.wasm"],
+    },
+  },
 };
 
 module.exports = nextConfig;

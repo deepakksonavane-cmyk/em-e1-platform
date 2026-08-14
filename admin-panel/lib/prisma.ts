@@ -1,15 +1,15 @@
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 
-// This app's Prisma Client is generated with `engineType = "client"` (see
-// prisma/schema.prisma) — a Rust-free client that runs entirely on the WASM
-// query compiler bundled inside @prisma/client. That mode requires an
-// explicit driver adapter instead of Prisma's usual native connection
-// pooling, so we hand it a plain `pg` Pool via @prisma/adapter-pg.
 const globalForPrisma = global as unknown as { prisma: PrismaClient };
 
+const isLocalDb = /localhost|127\.0\.0\.1/.test(process.env.DATABASE_URL ?? "");
+
 function createClient() {
-  const adapter = new PrismaPg({ connectionString: process.env.DATABASE_URL });
+  const adapter = new PrismaPg({
+    connectionString: process.env.DATABASE_URL,
+    ssl: isLocalDb ? undefined : { rejectUnauthorized: false },
+  });
   return new PrismaClient({
     adapter,
     log: process.env.NODE_ENV === "development" ? ["error", "warn"] : ["error"],
