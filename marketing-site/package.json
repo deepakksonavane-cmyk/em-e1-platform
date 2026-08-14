@@ -1,3 +1,11 @@
+
+package.json
+
+Page
+1
+/
+1
+100%
 {
   "name": "marketing-site",
   "version": "0.1.0",
@@ -13,7 +21,8 @@
     "next": "14.2.35",
     "react": "^18",
     "react-dom": "^18",
-    "zod": "^4.4.3"
+    "zod": "^4.4.3",
+    "pg": "^8.13.1"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -23,6 +32,69 @@
     "eslint-config-next": "14.2.35",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "@types/pg": "^8.11.10"
   }
 }
+Displaying package.json.
+Chat
+
+New Conversation
+
+🤓 Explain a complex thing
+
+Explain Artificial Intelligence so that I can explain it to my six-year-old child.
+
+
+🧠 Get suggestions and create new ideas
+
+Please give me the best 10 travel ideas around the world
+
+
+💭 Translate, summarize, fix grammar and more…
+
+Translate "I love you" French
+
+
+GPT-4o Mini
+Hello, how can I help you today?
+GPT-4o Mini
+coin image
+10
+Upgrade
+
+
+
+
+s": {
+    "lucide-react": "^1.31.0",
+    "next": "14.2.35",
+    "react": "^18",
+    "react-dom": "^18",
+    "zod": "^4.4.3",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5",
+    "@types/pg": "^8.11.10"
+
+
+
+
+Powered by AITOPIA 
+Chat
+Ask
+Search
+Write
+Image
+ChatFile
+Vision
+Full Page
+
