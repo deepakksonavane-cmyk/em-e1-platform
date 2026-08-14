@@ -1,9 +1,7 @@
-
-Storage · TS
 import { promises as fs } from "fs";
 import path from "path";
 import { query, pool } from "../../lib/db";
- 
+
 /**
  * Persistence layer for form submissions (applications, contact messages,
  * newsletter signups).
@@ -20,17 +18,17 @@ import { query, pool } from "../../lib/db";
  * concurrent submissions never clobber one another. This keeps `next dev`
  * working with zero setup.
  */
- 
+
 const DATA_DIR = path.join(process.cwd(), "data");
 const USE_DB = Boolean(process.env.DATABASE_URL);
- 
+
 // Serializes writes per-collection so concurrent requests append safely.
 const writeQueues = new Map<string, Promise<unknown>>();
- 
+
 async function ensureDataDir() {
   await fs.mkdir(DATA_DIR, { recursive: true });
 }
- 
+
 async function readCollectionFile<T>(file: string): Promise<T[]> {
   await ensureDataDir();
   const filePath = path.join(DATA_DIR, file);
@@ -43,7 +41,7 @@ async function readCollectionFile<T>(file: string): Promise<T[]> {
     throw err;
   }
 }
- 
+
 async function writeCollectionFile<T>(file: string, records: T[]): Promise<void> {
   await ensureDataDir();
   const filePath = path.join(DATA_DIR, file);
@@ -51,7 +49,7 @@ async function writeCollectionFile<T>(file: string, records: T[]): Promise<void>
   await fs.writeFile(tmpPath, JSON.stringify(records, null, 2), "utf-8");
   await fs.rename(tmpPath, filePath);
 }
- 
+
 async function readCollectionDb<T>(collection: string): Promise<T[]> {
   const rows = await query<{ data: T }>(
     `SELECT data FROM marketing_records WHERE collection = $1 ORDER BY created_at ASC`,
@@ -59,7 +57,7 @@ async function readCollectionDb<T>(collection: string): Promise<T[]> {
   );
   return rows.map((r) => r.data);
 }
- 
+
 async function writeCollectionDb<T>(collection: string, records: T[]): Promise<void> {
   // Small demo-scale datasets — replace the whole collection transactionally,
   // which mirrors the previous "rewrite the whole file" semantics exactly.
@@ -81,7 +79,7 @@ async function writeCollectionDb<T>(collection: string, records: T[]): Promise<v
     client.release();
   }
 }
- 
+
 export async function appendRecord<T extends { id: string }>(
   file: string,
   record: T
@@ -94,7 +92,7 @@ export async function appendRecord<T extends { id: string }>(
     ]);
     return record;
   }
- 
+
   const previous = writeQueues.get(file) ?? Promise.resolve();
   const next = previous
     .catch(() => undefined)
@@ -107,12 +105,12 @@ export async function appendRecord<T extends { id: string }>(
   writeQueues.set(file, next);
   return next;
 }
- 
+
 export async function listRecords<T>(file: string): Promise<T[]> {
   if (USE_DB) return readCollectionDb<T>(file);
   return readCollectionFile<T>(file);
 }
- 
+
 export async function updateCollection<T>(
   file: string,
   mutate: (records: T[]) => T[]
@@ -123,7 +121,7 @@ export async function updateCollection<T>(
     await writeCollectionDb(file, updated);
     return;
   }
- 
+
   const previous = writeQueues.get(file) ?? Promise.resolve();
   const next = previous
     .catch(() => undefined)
@@ -135,12 +133,9 @@ export async function updateCollection<T>(
   writeQueues.set(file, next);
   return next;
 }
- 
+
 export function generateId(prefix: string): string {
   const timestamp = Date.now().toString(36);
   const random = Math.random().toString(36).slice(2, 8);
   return `${prefix}-${timestamp}-${random}`.toUpperCase();
 }
- 
-
-Downloaded db.ts Show in Explorer
