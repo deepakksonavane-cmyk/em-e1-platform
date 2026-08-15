@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SubmitButton from "@/components/SubmitButton";
 
 export default async function LoginPage({
   searchParams,
@@ -54,12 +55,12 @@ export default async function LoginPage({
                 placeholder="••••••••"
               />
             </div>
-            <button
-              type="submit"
+            <SubmitButton
+              pendingText="Signing in…"
               className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-md py-2.5 text-sm transition-colors"
             >
               Sign in
-            </button>
+            </SubmitButton>
           </form>
 
           <p className="text-sm text-slate-500 mt-6 text-center">

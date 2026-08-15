@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import SubmitButton from "./SubmitButton";
 
 const NAV = [
   { href: "/dashboard", label: "Dashboard", icon: "🏠" },
@@ -46,12 +47,12 @@ export default function Sidebar() {
         })}
       </nav>
       <form action="/api/auth/logout" method="POST" className="p-4 border-t border-slate-800">
-        <button
-          type="submit"
+        <SubmitButton
+          pendingText="⎋ Signing out…"
           className="w-full text-sm text-slate-300 hover:text-white text-left px-1 py-2"
         >
           ⎋ Sign out
-        </button>
+        </SubmitButton>
       </form>
     </aside>
   );

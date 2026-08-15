@@ -1,3 +1,5 @@
+import SubmitButton from "@/components/SubmitButton";
+
 export default function FacultyNoticePage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-950 px-4">
@@ -11,9 +13,12 @@ export default function FacultyNoticePage() {
           separate Faculty Admin Panel, not in this Student LMS.
         </p>
         <form action="/api/auth/logout" method="POST">
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-md px-4 py-2">
+          <SubmitButton
+            pendingText="Signing out…"
+            className="bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium rounded-md px-4 py-2"
+          >
             Sign out
-          </button>
+          </SubmitButton>
         </form>
       </div>
     </div>
