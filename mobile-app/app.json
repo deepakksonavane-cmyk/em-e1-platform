@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "EM&L E1 Student",
+    "slug": "em-e1-student-app",
+    "scheme": "eme1student",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#0B1F3A",
+    "primaryColor": "#F5A623",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.emleadershipacademy.e1student",
+      "infoPlist": {
+        "UIBackgroundModes": ["remote-notification"]
+      }
+    },
+    "android": {
+      "package": "com.emleadershipacademy.e1student",
+      "adaptiveIcon": {
+        "backgroundColor": "#0B1F3A",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["NOTIFICATIONS", "SCHEDULE_EXACT_ALARM"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#F5A623"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": ""
+      }
+    }
+  }
+}
