@@ -2,6 +2,7 @@
   "expo": {
     "name": "EM&L E1 Student",
     "slug": "em-e1-student-app",
+    "owner": "deepakksonavanes-team",
     "scheme": "eme1student",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -41,7 +42,7 @@
     ],
     "extra": {
       "eas": {
-        "projectId": ""
+        "projectId": "baa2e60a-cbb4-4647-adb8-9387337cc02e"
       }
     }
   }
