@@ -27,17 +27,9 @@ export async function sendEmail(
 ): Promise<{ ok: boolean; stub?: true; error?: string }> {
   const apiKey = process.env.RESEND_API_KEY;
 
-  // TEMPORARY DEBUG LOGGING — using console.error so it shows up in Vercel's
-  // filtered log view regardless of log level. Safe to remove once email
-  // delivery is confirmed working end-to-end. Never logs the actual key.
-  // eslint-disable-next-line no-console
-  console.error(
-    `[lib/email.ts DEBUG] apiKey present=${!!apiKey} length=${apiKey ? apiKey.length : 0} prefix=${apiKey ? apiKey.slice(0, 3) : "n/a"} to=${payload.to} EMAIL_FROM=${process.env.EMAIL_FROM || "(unset, using default)"}`
-  );
-
   if (!apiKey) {
     // eslint-disable-next-line no-console
-    console.error(
+    console.log(
       `[lib/email.ts STUB — RESEND_API_KEY not set] Would send email to=${payload.to} subject="${payload.subject}"`
     );
     return { ok: true, stub: true };
@@ -58,20 +50,12 @@ export async function sendEmail(
       }),
     });
 
-    // TEMPORARY DEBUG LOGGING
-    // eslint-disable-next-line no-console
-    console.error(`[lib/email.ts DEBUG] Resend response status=${res.status} ok=${res.ok}`);
-
     if (!res.ok) {
       const errText = await res.text().catch(() => "");
       // eslint-disable-next-line no-console
       console.error(`[lib/email.ts] Resend send failed (${res.status}): ${errText}`);
       return { ok: false, error: errText || `HTTP ${res.status}` };
     }
-
-    const resBody = await res.text().catch(() => "");
-    // eslint-disable-next-line no-console
-    console.error(`[lib/email.ts DEBUG] Resend response body: ${resBody}`);
 
     return { ok: true };
   } catch (err) {
