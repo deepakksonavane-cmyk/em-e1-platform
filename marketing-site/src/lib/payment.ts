@@ -120,5 +120,5 @@ export async function verifyPayment(
   );
 }
 
-export const PROGRAM_FEE_INR = 45000;
-export const APPLICATION_FEE_INR = 1000;
+export const PROGRAM_FEE_INR = 120000;
+export const APPLICATION_FEE_INR = 10000; // Registration Fee — non-refundable
