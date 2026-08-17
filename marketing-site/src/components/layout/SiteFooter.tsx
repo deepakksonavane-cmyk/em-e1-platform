@@ -33,7 +33,7 @@ export default function SiteFooter() {
           <ul className="mt-4 space-y-2.5 text-sm text-white/75">
             <li><Link href="/program" className="hover:text-gold-300">Program Curriculum</Link></li>
             <li><Link href="/faculty" className="hover:text-gold-300">Faculty</Link></li>
-            <li><Link href="/testimonials" className="hover:text-gold-300">Testimonials</Link></li>
+            <li><Link href="/career-pathways" className="hover:text-gold-300">Career Pathways</Link></li>
             <li><Link href="/blog" className="hover:text-gold-300">Blog &amp; News</Link></li>
             <li><Link href="/apply" className="hover:text-gold-300">Apply Now</Link></li>
           </ul>

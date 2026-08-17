@@ -8,7 +8,7 @@ import clsx from "@/lib/clsx";
 const NAV_LINKS = [
   { href: "/program", label: "Program" },
   { href: "/faculty", label: "Faculty" },
-  { href: "/testimonials", label: "Testimonials" },
+  { href: "/career-pathways", label: "Career Pathways" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];

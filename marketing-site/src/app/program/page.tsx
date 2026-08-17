@@ -4,6 +4,7 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import SubjectAccordion from "@/components/program/SubjectAccordion";
 import { program, subjects, weekends, assessments } from "@/lib/program";
+import { PROGRAM_FEE_INR, APPLICATION_FEE_INR } from "@/lib/payment";
 
 export const metadata: Metadata = {
   title: "Program & Curriculum",
@@ -27,6 +28,46 @@ export default function ProgramPage() {
             hours · {program.totalSubjects} subjects · {program.totalSessions}{" "}
             live sessions · {program.totalLecturers} specialist lecturers
           </p>
+        </Container>
+      </section>
+
+      {/* Fees */}
+      <section className="section bg-navy-50">
+        <Container>
+          <SectionHeading
+            eyebrow="Program Fees"
+            title="Simple, transparent pricing"
+            description="One-time application fee plus the full program fee, payable to enroll in the Event Management & Team Leadership E1 diploma."
+          />
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <div className="rounded-xl border border-navy-100 p-7 text-center">
+              <p className="text-sm font-semibold uppercase tracking-wide text-gold-600">
+                Application Fee
+              </p>
+              <p className="mt-3 font-display text-3xl font-bold text-navy-900">
+                ₹{APPLICATION_FEE_INR.toLocaleString("en-IN")}
+              </p>
+              <p className="mt-2 text-sm text-navy-500">Non-refundable, paid at time of application.</p>
+            </div>
+            <div className="rounded-xl border border-navy-100 p-7 text-center">
+              <p className="text-sm font-semibold uppercase tracking-wide text-gold-600">
+                Program Fee
+              </p>
+              <p className="mt-3 font-display text-3xl font-bold text-navy-900">
+                ₹{PROGRAM_FEE_INR.toLocaleString("en-IN")}
+              </p>
+              <p className="mt-2 text-sm text-navy-500">Covers all 6 subjects, 74 sessions, and 3 in-person weekends.</p>
+            </div>
+            <div className="rounded-xl bg-navy-900 p-7 text-center text-white">
+              <p className="text-sm font-semibold uppercase tracking-wide text-gold-300">
+                Total
+              </p>
+              <p className="mt-3 font-display text-3xl font-bold">
+                ₹{(PROGRAM_FEE_INR + APPLICATION_FEE_INR).toLocaleString("en-IN")}
+              </p>
+              <p className="mt-2 text-sm text-white/70">Payable in full to confirm your seat.</p>
+            </div>
+          </div>
         </Container>
       </section>
 

@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { program, subjects, weekends } from "@/lib/program";
-import { testimonials } from "@/data/testimonials";
+import { careerPathways } from "@/data/career-pathways";
+import PathwayIcon from "@/components/career-pathways/PathwayIcon";
 
 export const metadata: Metadata = {
   title: "Diploma in Event Management & Team Leadership",
@@ -183,29 +184,30 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Testimonials teaser */}
+      {/* Career pathways teaser */}
       <section className="section bg-navy-gradient text-white">
         <Container>
           <SectionHeading
-            eyebrow="Student Voices"
-            title="What learners say about the program"
+            eyebrow="Life After E1"
+            title="Where the diploma can take you"
+            description="A first batch hasn't graduated yet, so instead of quoting students we don't have, here's what the curriculum actually prepares you to do."
             light
             align="center"
           />
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {testimonials.slice(0, 3).map((t) => (
-              <blockquote key={t.name} className="rounded-xl bg-white/5 p-7">
-                <p className="text-sm leading-relaxed text-white/85">&ldquo;{t.quote}&rdquo;</p>
-                <footer className="mt-5">
-                  <p className="text-sm font-semibold text-gold-300">{t.name}</p>
-                  <p className="text-xs text-white/60">{t.role}</p>
-                </footer>
-              </blockquote>
+            {careerPathways.slice(0, 3).map((p) => (
+              <div key={p.id} className="rounded-xl bg-white/5 p-7">
+                <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 text-gold-300">
+                  <PathwayIcon name={p.icon} className="h-5 w-5" />
+                </span>
+                <h3 className="mt-4 font-display text-base font-semibold text-white">{p.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-white/75">{p.summary}</p>
+              </div>
             ))}
           </div>
           <div className="mt-10 text-center">
-            <Link href="/testimonials" className="text-sm font-semibold text-gold-300 underline decoration-2 underline-offset-4 hover:text-gold-200">
-              Read more stories →
+            <Link href="/career-pathways" className="text-sm font-semibold text-gold-300 underline decoration-2 underline-offset-4 hover:text-gold-200">
+              Explore all career pathways →
             </Link>
           </div>
         </Container>
