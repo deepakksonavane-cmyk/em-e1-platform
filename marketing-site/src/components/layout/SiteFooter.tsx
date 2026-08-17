@@ -35,6 +35,7 @@ export default function SiteFooter() {
             <li><Link href="/faculty" className="hover:text-gold-300">Faculty</Link></li>
             <li><Link href="/career-pathways" className="hover:text-gold-300">Career Pathways</Link></li>
             <li><Link href="/blog" className="hover:text-gold-300">Blog &amp; News</Link></li>
+            <li><Link href="/faq" className="hover:text-gold-300">FAQ</Link></li>
             <li><Link href="/apply" className="hover:text-gold-300">Apply Now</Link></li>
           </ul>
         </div>
