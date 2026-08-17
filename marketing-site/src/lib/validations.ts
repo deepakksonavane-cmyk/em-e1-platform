@@ -101,3 +101,20 @@ export const newsletterSchema = z.object({
 });
 
 export type NewsletterInput = z.infer<typeof newsletterSchema>;
+
+export const feedbackSchema = z.object({
+  name: z.string().min(2, "Name is required"),
+  email: z.string().email("Enter a valid email address").optional().or(z.literal("")),
+  role: z.enum([
+    "Prospective Student",
+    "Parent / Guardian",
+    "Industry Professional",
+    "Friend / Family Reviewer",
+    "Other",
+  ]),
+  rating: z.enum(["1", "2", "3", "4", "5"]),
+  pageReviewed: z.string().optional().or(z.literal("")),
+  feedback: z.string().min(10, "Please share at least a couple of sentences of feedback"),
+});
+
+export type FeedbackInput = z.infer<typeof feedbackSchema>;
