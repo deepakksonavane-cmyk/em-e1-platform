@@ -18,27 +18,25 @@ export default function SiteHeader() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-navy-100 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-navy-100/80 bg-white/80 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5 sm:px-8 lg:px-10">
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-navy-900 font-display text-lg font-bold text-gold-400">
+          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-navy-900 font-display text-sm font-semibold text-white">
             E1
           </span>
-          <span className="hidden font-display text-base font-semibold leading-tight text-navy-900 sm:block">
-            Event Management &amp;
-            <br />
-            Team Leadership
+          <span className="hidden font-display text-[15px] font-medium leading-tight text-navy-900 sm:block">
+            Event Management &amp; Team Leadership
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={clsx(
-                "text-sm font-medium transition hover:text-gold-600",
-                pathname === link.href ? "text-gold-600" : "text-navy-700"
+                "text-[13px] font-medium transition hover:text-gold-500",
+                pathname === link.href ? "text-gold-500" : "text-navy-600"
               )}
             >
               {link.label}
@@ -49,7 +47,7 @@ export default function SiteHeader() {
         <div className="hidden md:block">
           <Link
             href="/apply"
-            className="rounded-md bg-navy-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-navy-700"
+            className="rounded-full bg-navy-900 px-5 py-2 text-[13px] font-medium text-white transition hover:bg-navy-700"
           >
             Apply Now
           </Link>

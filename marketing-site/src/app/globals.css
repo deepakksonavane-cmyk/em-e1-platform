@@ -4,16 +4,18 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0a1122;
-  /* Font stacks used in place of next/font/google (see layout.tsx note) */
-  --font-display: Georgia, "Times New Roman", "Playfair Display", serif;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, sans-serif;
+  --foreground: #1d1d1f;
+  /* Apple-style system font stack — no serif, no external font loads. */
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  -webkit-font-smoothing: antialiased;
 }
 
 @layer utilities {
@@ -21,9 +23,9 @@ body {
     text-wrap: balance;
   }
   .section {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-28;
   }
   .container-page {
-    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-6xl px-6 sm:px-8 lg:px-10;
   }
 }

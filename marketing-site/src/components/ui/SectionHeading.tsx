@@ -18,8 +18,8 @@ export default function SectionHeading({
       {eyebrow && (
         <p
           className={clsx(
-            "text-sm font-semibold uppercase tracking-widest",
-            light ? "text-gold-300" : "text-gold-600"
+            "text-sm font-semibold uppercase tracking-wide",
+            light ? "text-gold-300" : "text-gold-500"
           )}
         >
           {eyebrow}
@@ -27,14 +27,14 @@ export default function SectionHeading({
       )}
       <h2
         className={clsx(
-          "mt-2 font-display text-3xl font-bold tracking-tight sm:text-4xl",
+          "mt-3 font-display text-4xl font-semibold tracking-tightest sm:text-5xl",
           light ? "text-white" : "text-navy-900"
         )}
       >
         {title}
       </h2>
       {description && (
-        <p className={clsx("mt-4 text-base leading-relaxed", light ? "text-white/75" : "text-navy-600")}>
+        <p className={clsx("mt-5 text-lg leading-relaxed", light ? "text-white/70" : "text-navy-500")}>
           {description}
         </p>
       )}

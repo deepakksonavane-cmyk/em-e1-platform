@@ -47,35 +47,30 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-navy-gradient text-white">
-        <div className="pointer-events-none absolute inset-0 opacity-20">
-          <div className="absolute -left-24 -top-24 h-96 w-96 rounded-full bg-gold-400 blur-3xl" />
-          <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-navy-400 blur-3xl" />
-        </div>
-        <Container className="relative py-20 md:py-28">
-          <div className="max-w-3xl">
-            <p className="inline-flex items-center rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-gold-300">
+      <section className="relative overflow-hidden bg-white text-navy-900">
+        <Container className="relative py-24 text-center md:py-32">
+          <div className="mx-auto max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-wide text-navy-400">
               {program.level} · Program Code {program.programCode}
             </p>
-            <h1 className="mt-6 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl">
+            <h1 className="mt-4 font-display text-5xl font-semibold leading-[1.05] tracking-tightest sm:text-6xl md:text-7xl">
               {program.programName}
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
+            <p className="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-navy-500">
               A complete {program.durationMonths}-month blended diploma that
               takes you from event fundamentals to leading full-scale
-              productions — combining live online classes, hands-on
-              in-person weekends, and a real-world internship.
+              productions.
             </p>
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Link
                 href="/apply"
-                className="rounded-md bg-gold-400 px-7 py-3.5 text-sm font-semibold text-navy-900 shadow-card transition hover:bg-gold-300"
+                className="rounded-full bg-gold-500 px-8 py-3.5 text-[15px] font-medium text-white shadow-card transition hover:bg-gold-600"
               >
                 Apply Now
               </Link>
               <Link
                 href="/program"
-                className="rounded-md border border-white/25 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
+                className="rounded-full border border-navy-200 px-8 py-3.5 text-[15px] font-medium text-navy-900 transition hover:bg-navy-50"
               >
                 Explore the Curriculum
               </Link>
@@ -84,15 +79,15 @@ export default function HomePage() {
         </Container>
 
         {/* Stats bar */}
-        <div className="relative border-t border-white/10 bg-navy-950/40">
+        <div className="relative border-t border-navy-100 bg-navy-50">
           <Container>
-            <dl className="grid grid-cols-2 gap-6 py-8 sm:grid-cols-5">
+            <dl className="grid grid-cols-2 gap-6 py-10 sm:grid-cols-5">
               {stats.map((stat) => (
-                <div key={stat.label} className="text-center sm:text-left">
-                  <dt className="text-xs font-medium uppercase tracking-wide text-white/60">
+                <div key={stat.label} className="text-center">
+                  <dt className="text-xs font-medium uppercase tracking-wide text-navy-400">
                     {stat.label}
                   </dt>
-                  <dd className="mt-1 font-display text-3xl font-bold text-gold-300">
+                  <dd className="mt-1 font-display text-3xl font-semibold text-navy-900">
                     {stat.value}
                   </dd>
                 </div>
@@ -225,7 +220,7 @@ export default function HomePage() {
             career-ready diploma.
           </p>
           <div className="mt-8">
-            <Link href="/apply" className="rounded-md bg-gold-400 px-8 py-3.5 text-sm font-semibold text-navy-900 transition hover:bg-gold-300">
+            <Link href="/apply" className="rounded-full bg-gold-500 px-8 py-3.5 text-[15px] font-medium text-white transition hover:bg-gold-600">
               Start Your Application
             </Link>
           </div>
