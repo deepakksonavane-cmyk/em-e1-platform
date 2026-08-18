@@ -15,7 +15,7 @@ const TOTAL_WEEKS = 24;
 // with the perspective wrapper and layered glow/shadow.
 function weekToPoint(week: number) {
   const t = (week - 1) / (TOTAL_WEEKS - 1); // 0..1
-  const x = 6 + t * 88;
+  const x = 12 + t * 76;
   const wave = Math.sin(t * Math.PI * 2.1) * 16;
   const y = 50 + wave;
   return { x, y };
@@ -125,16 +125,26 @@ export default function ProgramJourneyMap() {
               const mid = (s.start + s.end) / 2;
               const p = weekToPoint(mid);
               const isHover = hover?.kind === "subject" && hover.index === i;
+              const isSelected = hover?.kind === "subject" && hover.index === i;
               return (
-                <g key={s.code}>
+                <g
+                  key={s.code}
+                  className="cursor-pointer"
+                  onMouseEnter={() => setHover({ kind: "subject", index: i })}
+                  onMouseLeave={() => setHover(null)}
+                  onClick={() =>
+                    setHover(isSelected ? null : { kind: "subject", index: i })
+                  }
+                >
+                  {/* generous invisible hit area — the visible dot is small,
+                      this is what actually catches the hover/tap */}
+                  <circle cx={p.x} cy={p.y} r={5} fill="transparent" />
                   <circle
                     cx={p.x}
                     cy={p.y}
                     r={isHover ? 2.4 : 1.5}
                     fill={isHover ? "#2997ff" : "#a8d4ff"}
-                    className="cursor-pointer transition-all"
-                    onMouseEnter={() => setHover({ kind: "subject", index: i })}
-                    onMouseLeave={() => setHover(null)}
+                    className="pointer-events-none transition-all"
                   />
                   <text
                     x={p.x}
@@ -154,8 +164,20 @@ export default function ProgramJourneyMap() {
             {weekends.map((w, i) => {
               const p = weekToPoint(WEEKEND_WEEKS[i]);
               const isHover = hover?.kind === "weekend" && hover.index === i;
+              const isSelected = hover?.kind === "weekend" && hover.index === i;
               return (
-                <g key={w.code}>
+                <g
+                  key={w.code}
+                  className="cursor-pointer"
+                  onMouseEnter={() => setHover({ kind: "weekend", index: i })}
+                  onMouseLeave={() => setHover(null)}
+                  onClick={() =>
+                    setHover(isSelected ? null : { kind: "weekend", index: i })
+                  }
+                >
+                  {/* generous invisible hit area — the visible dot is small,
+                      this is what actually catches the hover/tap */}
+                  <circle cx={p.x} cy={p.y} r={7} fill="transparent" />
                   <circle
                     cx={p.x}
                     cy={p.y}
@@ -164,7 +186,7 @@ export default function ProgramJourneyMap() {
                     stroke="#e8ac33"
                     strokeWidth="0.35"
                     opacity="0.55"
-                    className="transition-all"
+                    className="pointer-events-none transition-all"
                   />
                   <circle
                     cx={p.x}
@@ -172,9 +194,7 @@ export default function ProgramJourneyMap() {
                     r={isHover ? 3 : 2.4}
                     fill="#ffd479"
                     filter="url(#glow)"
-                    className="cursor-pointer transition-all"
-                    onMouseEnter={() => setHover({ kind: "weekend", index: i })}
-                    onMouseLeave={() => setHover(null)}
+                    className="pointer-events-none transition-all"
                   />
                   <text
                     x={p.x}
@@ -262,7 +282,7 @@ export default function ProgramJourneyMap() {
       </div>
       <p className="mt-3 text-center text-xs text-navy-400">
         Drag the slider to see where a student is in the 24-week journey.
-        Hover any node for details.
+        Hover or tap any node for details.
       </p>
     </div>
   );
