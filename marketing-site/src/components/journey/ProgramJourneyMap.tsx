@@ -1,7 +1,6 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import clsx from "@/lib/clsx";
 import { subjects, weekends } from "@/lib/program";
 
 // The 24-week journey, laid out as points along an S-curve path so the whole
